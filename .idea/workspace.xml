@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f9991ccb-7271-49d5-ab3e-d8c05126b1cb" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/Ficheros Práctica 7/Ficheros - Práctica 7/Mazmorras/hogarDelHacedor.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/Ficheros Práctica 7/Ficheros - Práctica 7/Mazmorras/infiernosAbrasadores.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/Ficheros Práctica 7/Ficheros - Práctica 7/Mazmorras/lienzodelapintorasollozante.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/Ficheros Práctica 7/Ficheros - Práctica 7/Mazmorras/monteIhuarraquax.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/Ficheros Práctica 7/Ficheros - Práctica 7/Tesoros/armadura.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/Ficheros Práctica 7/Ficheros - Práctica 7/Tesoros/armas.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/Ficheros Práctica 7/Ficheros - Práctica 7/Tesoros/artefactos.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/Ficheros Práctica 7/__MACOSX/Ficheros - Práctica 7/._.DS_Store" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/Ficheros Práctica 7/__MACOSX/Ficheros - Práctica 7/Mazmorras/._.DS_Store" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/Ficheros Práctica 7/__MACOSX/Ficheros - Práctica 7/Mazmorras/._hogarDelHacedor.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/Ficheros Práctica 7/__MACOSX/Ficheros - Práctica 7/Mazmorras/._infiernosAbrasadores.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/Ficheros Práctica 7/__MACOSX/Ficheros - Práctica 7/Mazmorras/._lienzodelapintorasollozante.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/Ficheros Práctica 7/__MACOSX/Ficheros - Práctica 7/Mazmorras/._monteIhuarraquax.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/Ficheros Práctica 7/__MACOSX/Ficheros - Práctica 7/Tesoros/._armadura.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/Ficheros Práctica 7/__MACOSX/Ficheros - Práctica 7/Tesoros/._armas.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/Ficheros Práctica 7/__MACOSX/Ficheros - Práctica 7/Tesoros/._artefactos.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica7_Arantxa.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Combate/Combate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Equipamiento/Arma.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Equipamiento/Equipamiento.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Mapa/Area.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Mapa/Trampa.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Misc/GameTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Misc/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Personajes/Personaje.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Personajes/Subclases/Cazador.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Personajes/Subclases/Clérigo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Personajes/Subclases/Creyente.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Personajes/Subclases/Guerrero.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Personajes/Subclases/Ladrón.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Personajes/Subclases/Mago.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Personajes/Subclases/Monstruo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Personajes/Subclases/Paladín.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Personajes/Subclases/Personaje.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Personajes/Subclases/src/Combate/Combate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Personajes/Subclases/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Personajes/Subclases/src/Mapa/Area.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Personajes/Subclases/src/Mapa/Trampa.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Personajes/Subclases/src/Misc/GameTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Personajes/Subclases/src/Misc/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Personajes/Subclases/src/Personajes/Personaje.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Personajes/Subclases/src/Personajes/Subclases/Cazador.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Personajes/Subclases/src/Personajes/Subclases/Clérigo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Personajes/Subclases/src/Personajes/Subclases/Creyente.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Personajes/Subclases/src/Personajes/Subclases/Guerrero.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Personajes/Subclases/src/Personajes/Subclases/Ladrón.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Personajes/Subclases/src/Personajes/Subclases/Mago.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Personajes/Subclases/src/Personajes/Subclases/Monstruo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Personajes/Subclases/src/Personajes/Subclases/Paladín.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Personajes/Subclases/src/Personajes/Subclases/Personaje.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
+  </component>
+  <component name="ProjectId" id="3AnxflJdGMnI451FHTygA33qHNc" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "/home/tarde/Documentos/Programacion/Practicas/Practica7_Arantxa/src"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/.idea" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f9991ccb-7271-49d5-ab3e-d8c05126b1cb" name="Changes" comment="" />
+      <created>1773242241636</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1773242241636</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
