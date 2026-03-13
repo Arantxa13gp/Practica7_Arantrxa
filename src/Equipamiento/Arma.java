@@ -2,17 +2,20 @@ package Equipamiento;
 
 import java.awt.*;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Locale;
 
 public class Arma extends Equipamiento {
 
     private String empuñadura;
     private String tipo;
 
-    public Arma(String nombre, ArrayList<Integer> estadisticas, String rareza, int valor, String empuñadura, String tipo) {
+    public Arma(String nombre, HashMap<String, Integer> estadisticas, String rareza, int valor, String empuñadura, String tipo) {
         super(nombre, estadisticas, rareza, valor);
         setEmpuñadura(empuñadura);
         setTipo(tipo);
     }
+
     public Arma(Equipamiento copia) {
         super(copia);
 
@@ -23,15 +26,7 @@ public class Arma extends Equipamiento {
     }
 
     public void setEmpuñadura(String empuñadura) {
-        this.empuñadura = empuñadura;
-    }
-
-    public String getTipo() {
-        return tipo;
-    }
-
-    public void setTipo(String tipo) {
-        switch (tipo.toLowerCase()){
+        switch (empuñadura.toLowerCase()) {
             case "una mano":
                 break;
             case "dos manos":
@@ -39,5 +34,41 @@ public class Arma extends Equipamiento {
             default:
                 return;
         }
+    }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        if (empuñadura.equals("una mano")) {
+            switch (tipo.toLowerCase()) {
+                case "espada":
+                    break;
+                case "maza":
+                    break;
+                case "hacha":
+                    break;
+                case "cetro":
+                    break;
+                case "daga":
+                    break;
+                default:
+                    return;
+            }
+        }
+    }
+
+    public String toString() {
+        return "Este arma se empuña con " + empuñadura + " y el arma es: " + tipo;
+    }
+
+    public boolean equals(Arma otro) {
+        if (!empuñadura.equals(otro.empuñadura)) {
+            return false;
+        }
+        if (!tipo.equals(otro.tipo)) {
+            return false;
+        } else return true;
     }
 }

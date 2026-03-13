@@ -1,14 +1,14 @@
 package Equipamiento;
 
-import java.util.ArrayList;
+import java.util.HashMap;
 
 public abstract class Equipamiento {
     private String nombre;
-    ArrayList<Integer> estadisticas = new ArrayList<>();
+    HashMap<String, Integer> estadisticas = new HashMap();
     private String rareza;
     private int valor;
 
-    public Equipamiento(String nombre, ArrayList<Integer> estadisticas, String rareza, int valor) {
+    public Equipamiento(String nombre, HashMap<String, Integer> estadisticas, String rareza, int valor) {
        setNombre(nombre);
        setEstadisticas(estadisticas);
        setRareza(rareza);
@@ -31,11 +31,11 @@ public abstract class Equipamiento {
         this.nombre = nombre;
     }
 
-    public ArrayList<Integer> getEstadisticas() {
+    public HashMap<String, Integer> getEstadisticas() {
         return estadisticas;
     }
 
-    public void setEstadisticas(ArrayList<Integer> estadisticas) {
+    public void setEstadisticas(HashMap<String, Integer> estadisticas) {
         this.estadisticas = estadisticas;
     }
 
