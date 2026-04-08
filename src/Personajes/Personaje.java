@@ -1,5 +1,11 @@
 package Personajes;
 
+import Equipamiento.Arma;
+import Equipamiento.Armadura;
+import Equipamiento.Artefacto;
+
+import java.util.ArrayList;
+
 /**
  * Clase Personaje, representa a un personaje con un nombre, una raza y estadísticas de ataque, armadura, vida, resistencia mágica, velocidad
  * @author Arantxa González Pérez
@@ -12,7 +18,10 @@ public class Personaje {
     private int pv, atq, arm, nivel; /** Atributo tipo int que define los puntos de vida, el ataque, la armadura y el nivel del personaje */
     private int res; /** Atributo tipo int que define la resistencia mágica del personaje */
     private int vel; /** Atributo tipo int que define la velocidad del personaje */
-    private String raza; /** Atributo tipo String que define la raza del personaje */
+    private String raza; /** Atributo tipo String que define la raza del personaje*/
+    private Arma arma;/**Atributo de tipo String que define que arma lleva el personaje*/
+    private ArrayList<Armadura> armadura;/**Atributo de tipo String que define el equipo del personaje*/
+    private ArrayList<Artefacto> amuleto; /**Atributo de tipo String que define los amuletos del personaje*/
 
     /**
      * Constructor por defecto.
@@ -77,6 +86,7 @@ public class Personaje {
         setVel(vel);
         setNivel(nivel);
         setRaza(raza);
+        setArma(arma);
     }
 
     /**
@@ -159,6 +169,30 @@ public class Personaje {
     }
 
     /**
+     * Getter de Arma.
+     * @return El arma que lleva el personaje.
+     */
+    public String getArma() {
+        return arma;
+    }
+
+    /**
+     * Getter de armadura.
+     * @return Las piezas de armadura que lleva el personaje.
+     */
+    public String getArmadura() {
+        return armadura;
+    }
+
+    /**
+     * Getter de amuleto
+     * @return Los amuletos que lleva el personaje.
+     */
+    public String getAmuleto() {
+        return amuleto;
+    }
+
+    /**
      * Setter de nombre que tiene que recibir por parametros una cadena no vacía.
      * @param n Nuevo nombre del personaje.
      */
@@ -231,6 +265,31 @@ public class Personaje {
      */
     public void setNivel(int nivel){
         this.nivel = nivel;
+    }
+
+    /**
+     * Setter del arma que lleva el personaje
+     *
+     * @param
+     * @param arma
+     */
+    public void setArma(Arma arma) {
+        this.arma = this.arma;
+    }
+
+    /**
+     * @param
+     */
+    public void setArmadura(String tipo, String material) {
+        this.armadura = armadura;
+    }
+
+    /**
+     *
+     * @param
+     */
+    public void setAmuleto(String tipo) {
+        this.amuleto = amuleto;
     }
 
     /**

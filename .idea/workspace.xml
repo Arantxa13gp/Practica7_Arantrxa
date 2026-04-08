@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f9991ccb-7271-49d5-ab3e-d8c05126b1cb" name="Changes" comment="Primer commit">
-      <change afterPath="$PROJECT_DIR$/src/Equipamiento/Armadura.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Equipamiento/Artefacto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Equipamiento/Arma.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Equipamiento/Arma.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Equipamiento/Equipamiento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Equipamiento/Equipamiento.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Equipamiento/Armadura.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Equipamiento/Armadura.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Equipamiento/Artefacto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Equipamiento/Artefacto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Personajes/Personaje.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Personajes/Personaje.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

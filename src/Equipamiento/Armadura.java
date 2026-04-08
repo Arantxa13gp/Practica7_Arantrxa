@@ -10,6 +10,8 @@ public class Armadura extends Equipamiento {
 
     public Armadura(String nombre, HashMap<String, Integer> estadisticas, String rareza, int valor, String tipo, String material) {
         super(nombre, estadisticas, rareza, valor);
+        setTipo(tipo);
+        setMaterial(material);
     }
 
     public Armadura(Equipamiento copia) {
@@ -54,5 +56,19 @@ public class Armadura extends Equipamiento {
             default:
                 return;
         }
+    }
+
+    @Override
+    public String toString() {
+        return "Esta armadura es un " + tipo + " y es de " + material;
+    }
+
+    public boolean equals(Armadura otro) {
+        if (!tipo.equals(otro.tipo)){
+            return false;
+        }
+        if (!material.equals(otro.material)){
+            return false;
+        }else return true;
     }
 }
