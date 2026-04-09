@@ -21,7 +21,7 @@ public class Personaje {
     private String raza; /** Atributo tipo String que define la raza del personaje*/
     private Arma arma;/**Atributo de tipo String que define que arma lleva el personaje*/
     private ArrayList<Armadura> armadura;/**Atributo de tipo String que define el equipo del personaje*/
-    private ArrayList<Artefacto> amuleto; /**Atributo de tipo String que define los amuletos del personaje*/
+    private ArrayList<Artefacto> artefacto; /**Atributo de tipo String que define los amuletos del personaje*/
 
     /**
      * Constructor por defecto.
@@ -77,7 +77,7 @@ public class Personaje {
      * @param vel Velocidad inicial.
      * @param raza Raza a la que pertenece el personaje.
      */
-    public Personaje(String nombre, int atq, int arm, int pv,int nivel, int res, int vel, String raza){
+    public Personaje(String nombre, int atq, int arm, int pv,int nivel, int res, int vel, String raza, Arma arma, Armadura armadura, Artefacto amuleto){
         setNombre(nombre);
         setPv(pv);
         setAtq(atq);
@@ -87,6 +87,7 @@ public class Personaje {
         setNivel(nivel);
         setRaza(raza);
         setArma(arma);
+        //armadura y amuleto
     }
 
     /**
@@ -102,6 +103,33 @@ public class Personaje {
         this.res = copia.res;
         this.vel = copia.vel;
         this.raza = copia.raza;
+        this.arma = copia.arma;
+        this.armadura = copia.armadura;
+        this.artefacto = copia.artefacto;
+    }
+
+    /**
+     * Getter de nombre.
+     * @return El nombre del personaje.
+     */
+    public Arma getArma() {
+        return arma;
+    }
+
+    /**
+     * Getter de nombre.
+     * @return El nombre del personaje.
+     */
+    public ArrayList<Armadura> getArmadura() {
+        return armadura;
+    }
+
+    /**
+     * Getter de nombre.
+     * @return El nombre del personaje.
+     */
+    public ArrayList<Artefacto> getAmuleto() {
+        return artefacto;
     }
 
     /**
@@ -169,27 +197,27 @@ public class Personaje {
     }
 
     /**
-     * Getter de Arma.
-     * @return El arma que lleva el personaje.
+     *
+     * @param arma
      */
-    public String getArma() {
-        return arma;
+    public void setArma(Arma arma) {
+        this.arma = arma;
     }
 
     /**
-     * Getter de armadura.
-     * @return Las piezas de armadura que lleva el personaje.
+     *
+     * @param armadura
      */
-    public String getArmadura() {
-        return armadura;
+    public void setArmadura(ArrayList<Armadura> armadura) {
+        this.armadura = armadura;
     }
 
     /**
-     * Getter de amuleto
-     * @return Los amuletos que lleva el personaje.
+     *
+     * @param artefacto
      */
-    public String getAmuleto() {
-        return amuleto;
+    public void setAmuleto(ArrayList<Artefacto> artefacto) {
+        this.artefacto = artefacto;
     }
 
     /**
@@ -265,31 +293,6 @@ public class Personaje {
      */
     public void setNivel(int nivel){
         this.nivel = nivel;
-    }
-
-    /**
-     * Setter del arma que lleva el personaje
-     *
-     * @param
-     * @param arma
-     */
-    public void setArma(Arma arma) {
-        this.arma = this.arma;
-    }
-
-    /**
-     * @param
-     */
-    public void setArmadura(String tipo, String material) {
-        this.armadura = armadura;
-    }
-
-    /**
-     *
-     * @param
-     */
-    public void setAmuleto(String tipo) {
-        this.amuleto = amuleto;
     }
 
     /**
@@ -385,6 +388,18 @@ public class Personaje {
         return muerto;
     }
 
+    public void equiparArma(Arma arma){
+
+    }
+
+    public void equiparArmadura(Armadura armadura){
+
+    }
+
+    public void equiparArtefacto(Artefacto artefacto){
+
+    }
+
     /**
      * Método toString que devuelve una representación en cadena de texto del personaje.
      * Muestra el nombre, raza, nivel y todas las estadísticas actuales del personaje.
@@ -426,11 +441,5 @@ public class Personaje {
         }
         else return true;
     }
-
-    public void defender(int daño, String tipoDaño){
-
-    }
-
-
 
 }

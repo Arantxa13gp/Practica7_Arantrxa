@@ -31,10 +31,8 @@ public class Monstruo extends Personaje {
      * @param vel Velocidad.
      * @param raza Raza del monstruo.
      */
-    public Monstruo(String nombre, int atq, int arm, int pv, int nivel, int res, int vel, String raza) {
-        super(nombre, atq, arm, pv, nivel, res, vel, raza);
-    }
-    
+    //hacer constructor
+
     /**
      * Método que define la especialización del monstruo según su raza y aplica una mejora
      * inmediata de estadísticas mediante bloques de probabilidad específicos.
