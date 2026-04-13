@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f9991ccb-7271-49d5-ab3e-d8c05126b1cb" name="Changes" comment="Segundo commit">
-      <change afterPath="$PROJECT_DIR$/src/Mapa/Mazmorra.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Personajes/Personaje.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Personajes/Personaje.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Personajes/Subclases/Monstruo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Personajes/Subclases/Monstruo.java" afterDir="false" />
-    </list>
+    <list default="true" id="f9991ccb-7271-49d5-ab3e-d8c05126b1cb" name="Changes" comment="tercer commit" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -80,7 +75,14 @@
       <option name="project" value="LOCAL" />
       <updated>1775661706959</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="tercer commit">
+      <created>1775761525291</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1775761525291</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -97,6 +99,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Primer commit" />
     <MESSAGE value="Segundo commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Segundo commit" />
+    <MESSAGE value="tercer commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="tercer commit" />
   </component>
 </project>
