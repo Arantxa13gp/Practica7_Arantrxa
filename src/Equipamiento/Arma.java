@@ -10,15 +10,17 @@ public class Arma extends Equipamiento {
     private String empuñadura;
     private String tipo;
 
+
     public Arma(String nombre, HashMap<String, Integer> estadisticas, String rareza, int valor, String empuñadura, String tipo) {
         super(nombre, estadisticas, rareza, valor);
         setEmpuñadura(empuñadura);
         setTipo(tipo);
     }
 
-    public Arma(Equipamiento copia) {
+    public Arma(Arma copia) {
         super(copia);
-
+        this.empuñadura = copia.empuñadura;
+        this.tipo = copia.tipo;
     }
 
     public String getEmpuñadura() {

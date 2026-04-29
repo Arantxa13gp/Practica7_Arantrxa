@@ -28,7 +28,9 @@ public abstract class Equipamiento {
     }
 
     public void setNombre(String nombre) {
-        this.nombre = nombre;
+        if(nombre.length() > 20 || nombre.isEmpty())
+            this.nombre = "";
+        else this.nombre = nombre;
     }
 
     public HashMap<String, Integer> getEstadisticas() {
@@ -44,7 +46,12 @@ public abstract class Equipamiento {
     }
 
     public void setRareza(String rareza) {
-        this.rareza = rareza;
+        switch (rareza.toLowerCase()){
+            case "comun", "raro"," epico", "legendario":
+            break;
+            default:
+                this.rareza = "";
+        }
     }
 
     public int getValor() {
@@ -53,7 +60,7 @@ public abstract class Equipamiento {
 
     public void setValor(int valor) {
         if (valor < 1)
-            valor = -1;
+            this.valor = -1;
         else this.valor = valor;
     }
 

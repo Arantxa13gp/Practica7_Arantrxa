@@ -76,8 +76,9 @@ public class Personaje {
      * @param res Resistencia mágica inicial.
      * @param vel Velocidad inicial.
      * @param raza Raza a la que pertenece el personaje.
+     *
      */
-    public Personaje(String nombre, int atq, int arm, int pv,int nivel, int res, int vel, String raza, Arma arma, Armadura armadura, Artefacto amuleto){
+    public Personaje(String nombre, int atq, int arm, int pv,int nivel, int res, int vel, String raza, Arma arma, ArrayList<Armadura> armadura, ArrayList<Artefacto> artefacto){
         setNombre(nombre);
         setPv(pv);
         setAtq(atq);
@@ -87,7 +88,8 @@ public class Personaje {
         setNivel(nivel);
         setRaza(raza);
         setArma(arma);
-        //armadura y amuleto
+        setArmadura(armadura);
+        setAmuleto(artefacto);
     }
 
     /**
