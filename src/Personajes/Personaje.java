@@ -390,13 +390,22 @@ public class Personaje {
         return muerto;
     }
 
+    /**
+     * Equipa un arma al personaje.
+     * Verifica si el personaje ya posee un arma equipada antes de asignar la nueva.
+     * @param arma El objeto de tipo Arma que se desea equipar.
+     */
     public void equiparArma(Arma arma){
         if(this.arma != null){
             System.err.println("Error, ya tienes un arma equipada");
         } else setArma(arma);
     }
 
-
+    /**
+     * Equipa una pieza de armadura al personaje.
+     * Solo permite añadir la pieza si hay espacio disponible y si no existe otra pieza del mismo tipo.
+     * @param arm El objeto de tipo Armadura que se desea añadir al equipo.
+     */
     public void equiparArmadura(Armadura arm){
         if(comporbarArmadura()) {
             for (Armadura a : armadura) {
@@ -408,6 +417,10 @@ public class Personaje {
         }
     }
 
+    /**
+     * Verifica si el personaje puede equipar más piezas de armadura.
+     * @return true si el número de piezas es menor a 6, false en caso contrario.
+     */
     public boolean comporbarArmadura() {
         if (armadura.size() >= 6)
             return false;
@@ -415,6 +428,11 @@ public class Personaje {
 
     }
 
+    /**
+     * Equipa un artefacto o anillo al personaje.
+     * Valida que no se exceda el límite de un artefacto y máximo dos anillos.
+     * @param artefactos El objeto de tipo Artefacto que se intenta equipar.
+     */
     public void equiparArtefacto(Artefacto artefactos){
         int Artefactos = 0;
         int Anillos = 0;
@@ -441,6 +459,10 @@ public class Personaje {
         }
     }
 
+    /**
+     * Verifica si hay espacio en el inventario de artefactos.
+     * @return true si el personaje tiene menos de 3 artefactos equipados.
+     */
     public boolean comprobarArtefacto() {
         if (artefacto.size() >= 3)
             return false;

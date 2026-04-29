@@ -88,12 +88,23 @@ public class Ladrón extends Personaje {
         } else setVel(getVel()+1);
     }
 
+    /**
+     * Intenta equipar un arma al ladrón.
+     * Restringe el uso de armas que no sean de tipo "espada" o "dagas".
+     * @param arma El objeto de tipo Arma que se intenta equipar.
+     */
     public void equipaArma(Arma arma) {
         if (!getArma().getTipo().equals("espada") || !getArma().getTipo().equals("dagas")) {
             System.err.println("Error, el ladrón no puede llevar este tipo de armas");
         }
     }
 
+    /**
+     * Intenta equipar una pieza de armadura al ladrón.
+     * Solo permite equipar la pieza si hay espacio disponible y si el material
+     * es "tela" o "cuero", además de verificar que no se repita el tipo de pieza.
+     * @param armadura El objeto de tipo Armadura que se desea añadir al equipo.
+     */
     public void equipaArmadura(Armadura armadura){
         if(comporbarArmadura()) {
             for (Armadura a : getArmadura()) {

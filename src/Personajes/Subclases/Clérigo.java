@@ -136,12 +136,23 @@ public class Clérigo extends Creyente{
         return milagros;
     }
 
+    /**
+     * Intenta equipar un arma al clérigo validando su tipo.
+     * Restringe el uso de cualquier arma que no sea de tipo "baston".
+     * @param arma El objeto de tipo Arma que se desea equipar.
+     */
     public void equipaArma(Arma arma) {
         if (!getArma().getTipo().equals("baston")) {
             System.err.println("Error, el clérigo no puede llevar este tipo de arma");
         }
     }
 
+    /**
+     * Intenta equipar una pieza de armadura al clérigo.
+     * Solo permite añadir la pieza si es de material metálico ("metal"), si hay
+     * espacio en el equipo y si no se repite el tipo de pieza (casco, peto, etc.).
+     * @param armadura El objeto de tipo Armadura que se intenta añadir al inventario.
+     */
     public void equipaArmadura(Armadura armadura){
         if(comporbarArmadura()) {
             for (Armadura a : getArmadura()) {

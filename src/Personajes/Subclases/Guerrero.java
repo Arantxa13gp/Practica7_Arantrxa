@@ -105,6 +105,12 @@ public class Guerrero extends Personaje {
         }
     }
 
+    /**
+     * Intenta equipar un arma al guerrero validando el tipo y la empuñadura.
+     * Restringe el uso de cetros, arcos y bastones. Además, gestiona la lógica
+     * para armas de una o dos manos.
+     * @param arma El objeto de tipo Arma que se intenta equipar.
+     */
     public void equipaArma(Arma arma) {
         if(getArma().getTipo().equals("cetro") || getArma().getTipo().equals("arco")
                 || getArma().getTipo().equals("baston")){
@@ -123,6 +129,12 @@ public class Guerrero extends Personaje {
         }
     }
 
+    /**
+     * Intenta equipar una pieza de armadura al guerrero.
+     * Solo permite equipar piezas de material metálico ("metal") y verifica que
+     * no se repita el tipo de pieza (casco, peto, etc.) en el equipo actual.
+     * @param armadura El objeto de tipo Armadura que se desea añadir.
+     */
     public void equipaArmadura(Armadura armadura){
         if(comporbarArmadura()) {
             for (Armadura a : getArmadura()) {

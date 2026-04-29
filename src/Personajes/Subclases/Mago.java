@@ -142,12 +142,23 @@ public class Mago extends Personaje {
         }
     }
 
+    /**
+     * Intenta equipar un arma al mago validando su tipo.
+     * Restringe el uso de cualquier arma que no sea de tipo "cetro" o "baston".
+     * @param arma El objeto de tipo Arma que se intenta equipar.
+     */
     public void equipaArma(Arma arma) {
         if (!getArma().getTipo().equals("cetro") || !getArma().getTipo().equals("baston")) {
             System.err.println("Error, el mago no puede llevar este tipo de armas");
         }
     }
 
+    /**
+     * Intenta equipar una pieza de armadura al mago.
+     * Solo permite añadir la pieza si el material es de "tela" y si no hay otra
+     * pieza del mismo tipo ya equipada, respetando el límite de inventario.
+     * @param armadura El objeto de tipo Armadura que se desea añadir al equipo.
+     */
     public void equipaArmadura(Armadura armadura){
         if(comporbarArmadura()) {
             for (Armadura a : getArmadura()) {

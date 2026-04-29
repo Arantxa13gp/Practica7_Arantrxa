@@ -129,6 +129,7 @@ public class Cazador extends Personaje {
             System.err.println("Error, el compañero ya tiene un artefacto");
     }
 
+
     public boolean comprobarArtefacto() {
         if (getArtefacto().size() > 1)
             return false;
@@ -259,6 +260,11 @@ public class Cazador extends Personaje {
         }
     }
 
+    /**
+     * Intenta equipar un arma al cazador.
+     * Solo se permiten armas de tipo espada, hacha, dagas o arco.
+     * @param arma El arma que se desea equipar.
+     */
     public void equipaArma(Arma arma) {
         if (!getArma().getTipo().equals("espada") || !getArma().getTipo().equals("hacha") || !getArma().getTipo().equals("dagas") ||
                 !getArma().getTipo().equals("arco")) {
@@ -266,6 +272,11 @@ public class Cazador extends Personaje {
         }
     }
 
+    /**
+     * Intenta equipar una pieza de armadura al cazador.
+     * Solo permite equipar armaduras de material "cuero" y que no repitan tipo.
+     * @param armadura La pieza de armadura a equipar.
+     */
     public void equipaArmadura(Armadura armadura){
         if(comporbarArmadura()) {
             for (Armadura a : getArmadura()) {
