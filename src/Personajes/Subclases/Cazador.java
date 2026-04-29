@@ -8,6 +8,9 @@ package Personajes.Subclases;
  * @version v1.0
  */
 
+import Equipamiento.Arma;
+import Equipamiento.Armadura;
+import Equipamiento.Artefacto;
 import Personajes.Personaje;
 
 public class Cazador extends Personaje {
@@ -20,21 +23,6 @@ public class Cazador extends Personaje {
      */
     public Cazador() {
         super();
-    }
-
-    /**
-     * Constructor completo para la clase Cazador.
-     * @param nombre Nombre del cazador.
-     * @param atq Puntos de ataque.
-     * @param arm Puntos de armadura.
-     * @param pv Puntos de vida.
-     * @param nivel Nivel actual.
-     * @param res Resistencia mágica.
-     * @param vel Velocidad.
-     * @param raza Raza del personaje.
-     */
-    public Cazador(String nombre, int atq, int arm, int pv, int nivel, int res, int vel, String raza) {
-        super(nombre, atq, arm, pv, nivel, res, vel, raza);
     }
 
     /**
@@ -132,6 +120,21 @@ public class Cazador extends Personaje {
             return raza;
         }
     }
+
+    /**public void equipaArtefacto(Artefacto artefacto) {
+        if (comprobarArtefacto()) {
+            if(artefacto.getTipo().equals("Amuleto"))
+                getArtefacto().add(artefacto);
+        } else
+            System.err.println("Error, el compañero ya tiene un artefacto");
+    }
+
+    public boolean comprobarArtefacto() {
+        if (getArtefacto().size() > 1)
+            return false;
+        else
+            return true;
+    }*/
 
     public void subirCánino(){
 
@@ -253,6 +256,23 @@ public class Cazador extends Personaje {
             if (n >= 65) {
                 setVel(getVel() + 1);
             }
+        }
+    }
+
+    public void equipaArma(Arma arma) {
+        if (!getArma().getTipo().equals("espada") || !getArma().getTipo().equals("hacha") || !getArma().getTipo().equals("dagas") ||
+                !getArma().getTipo().equals("arco")) {
+            System.err.println("Error, el cazador no puede llevar este tipo de armas");
+        }
+    }
+
+    public void equipaArmadura(Armadura armadura){
+        if(comporbarArmadura()) {
+            for (Armadura a : getArmadura()) {
+                if(a.getTipo().equals(armadura.getTipo()) && a.getMaterial().equals("cuero"))
+                    return;
+            }
+            getArmadura().add(armadura);
         }
     }
 

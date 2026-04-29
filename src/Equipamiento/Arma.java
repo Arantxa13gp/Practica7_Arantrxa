@@ -43,19 +43,24 @@ public class Arma extends Equipamiento {
     public void setTipo(String tipo) {
         if (empuñadura.equals("una mano")) {
             switch (tipo.toLowerCase()) {
-                case "espada":
-                    break;
-                case "maza":
-                    break;
-                case "hacha":
-                    break;
-                case "cetro":
-                    break;
-                case "daga":
-                    break;
-                default:
-                    return;
+                case "espada","maza", "hacha", "cetro", "daga":
             }
+        }else{
+            if (empuñadura.equals("dos manos")){
+                switch (tipo.toLowerCase()) {
+                    case "espadon", "martillo", "arco", "baston":
+                }
+            }
+        }
+    }
+
+    @Override
+    public Integer recuperaEstadisticas(String estadistica) {
+        switch (estadistica.toLowerCase()){
+            case "ataque", "velocidad" , "fe", "magia":
+                return super.recuperaEstadisticas(estadistica);
+            default:
+                return null;
         }
     }
 

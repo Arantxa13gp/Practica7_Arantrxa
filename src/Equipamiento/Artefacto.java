@@ -32,6 +32,16 @@ public class Artefacto extends Equipamiento{
     }
 
     @Override
+    public Integer recuperaEstadisticas(String estadistica) {
+        switch (estadistica.toLowerCase()){
+            case "vida", "ataque", "armadura", "resistencia", "velocidad", "fe", "magia":
+                return super.recuperaEstadisticas(estadistica);
+            default:
+                return null;
+        }
+    }
+
+    @Override
     public String toString() {
         return "Este artefato es un " + tipo;
     }

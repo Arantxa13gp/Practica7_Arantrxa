@@ -52,12 +52,18 @@ public abstract class Equipamiento {
     }
 
     public void setValor(int valor) {
-        this.valor = valor;
+        if (valor < 1)
+            valor = -1;
+        else this.valor = valor;
     }
 
-    public void recuperaEstadisticas(String estadistica){
-
-        return;
+    public Integer recuperaEstadisticas(String estadistica){
+        switch (estadistica.toLowerCase()) {
+            case "vida", "ataque", "armadura", "resistencia", "velocidad" , "fe", "magia" :
+                return estadisticas.get(estadistica);
+            default:
+                return null;
+        }
     }
 
     public String toString(){

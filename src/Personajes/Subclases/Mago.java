@@ -5,6 +5,8 @@ package Personajes.Subclases;
  * @author Arantxa González Pérez
  * @version v1.0
  */
+import Equipamiento.Arma;
+import Equipamiento.Armadura;
 import Personajes.Personaje;
 
 public class Mago extends Personaje {
@@ -137,6 +139,22 @@ public class Mago extends Personaje {
                 break;
             case "presteza mental":
                 break;
+        }
+    }
+
+    public void equipaArma(Arma arma) {
+        if (!getArma().getTipo().equals("cetro") || !getArma().getTipo().equals("baston")) {
+            System.err.println("Error, el mago no puede llevar este tipo de armas");
+        }
+    }
+
+    public void equipaArmadura(Armadura armadura){
+        if(comporbarArmadura()) {
+            for (Armadura a : getArmadura()) {
+                if(a.getTipo().equals(armadura.getTipo()) && a.getMaterial().equals("tela"))
+                    return;
+            }
+            getArmadura().add(armadura);
         }
     }
 

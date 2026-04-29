@@ -6,6 +6,8 @@ package Personajes.Subclases;
  * @author Arantxa González Pérez
  * @version v1.0
  */
+import Equipamiento.Arma;
+import Equipamiento.Armadura;
 import Personajes.Personaje;
 
 public class Guerrero extends Personaje {
@@ -19,22 +21,6 @@ public class Guerrero extends Personaje {
     public Guerrero(){
         super();
         furia = false;
-    }
-
-    /**
-     * Constructor completo para la clase Guerrero.
-     * @param nombre Nombre del guerrero.
-     * @param atq Puntos de ataque iniciales.
-     * @param arm Puntos de armadura iniciales.
-     * @param pv Puntos de vida iniciales.
-     * @param nivel Nivel inicial.
-     * @param res Resistencia mágica inicial.
-     * @param vel Velocidad inicial.
-     * @param raza Raza a la que pertenece el guerrero.
-     */
-    public Guerrero(String nombre, int atq, int arm, int pv, int nivel, int res, int vel, String raza){
-        super(nombre, atq, arm, pv,nivel,res, vel, raza);
-        setFuria(false);
     }
 
     /**
@@ -119,11 +105,40 @@ public class Guerrero extends Personaje {
         }
     }
 
+    public void equipaArma(Arma arma) {
+        if(getArma().getTipo().equals("cetro") || getArma().getTipo().equals("arco")
+                || getArma().getTipo().equals("baston")){
+            System.err.println("Error, el guerrero no puede llevar este tipo de armas");
+        }
+        if(getArma().getEmpuñadura().equals("una mano")) {
+            if (getArma() == null) {
+                setArma(arma);
+            }
+
+            if (getArma().getEmpuñadura().equals("dos manos")) {
+                if (getArma() == null) {
+                    setArma(arma);
+                }
+            }
+        }
+    }
+
+    public void equipaArmadura(Armadura armadura){
+        if(comporbarArmadura()) {
+            for (Armadura a : getArmadura()) {
+                if(a.getTipo().equals(armadura.getTipo()) && a.getMaterial().equals("metal"))
+                    return;
+            }
+            getArmadura().add(armadura);
+        }
+    }
+
     /**
      * Método toString que devuelve una representación en cadena de texto del guerrero.
      * Utiliza la implementación de la clase superior Personaje para el resumen de datos.
      * @return Un String con la información del guerrero.
      */
+
     public String toString(){
         return super.toString();
     }

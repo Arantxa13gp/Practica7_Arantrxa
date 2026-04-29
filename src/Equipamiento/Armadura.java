@@ -59,6 +59,16 @@ public class Armadura extends Equipamiento {
     }
 
     @Override
+    public Integer recuperaEstadisticas(String estadistica) {
+        switch (estadistica.toLowerCase()){
+            case "vida", "armmadura", "resistencia" :
+                return super.recuperaEstadisticas(estadistica);
+            default:
+                return null;
+        }
+    }
+
+    @Override
     public String toString() {
         return "Esta armadura es un " + tipo + " y es de " + material;
     }

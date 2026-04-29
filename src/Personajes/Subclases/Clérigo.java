@@ -1,5 +1,8 @@
 package Personajes.Subclases;
 
+import Equipamiento.Arma;
+import Equipamiento.Armadura;
+
 /**
  * Clase Clérigo, representa una especialización de Creyente que enfoca su poder
  * en la fe, la sanación y la resistencia mágica.
@@ -131,6 +134,22 @@ public class Clérigo extends Creyente{
                 milagros = "";
         }
         return milagros;
+    }
+
+    public void equipaArma(Arma arma) {
+        if (!getArma().getTipo().equals("baston")) {
+            System.err.println("Error, el clérigo no puede llevar este tipo de arma");
+        }
+    }
+
+    public void equipaArmadura(Armadura armadura){
+        if(comporbarArmadura()) {
+            for (Armadura a : getArmadura()) {
+                if(a.getTipo().equals(armadura.getTipo()) && a.getMaterial().equals("metal"))
+                    return;
+            }
+            getArmadura().add(armadura);
+        }
     }
 
     /**

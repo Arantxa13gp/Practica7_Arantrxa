@@ -1,5 +1,8 @@
 package Personajes.Subclases;
 
+import Equipamiento.Arma;
+import Equipamiento.Armadura;
+
 public class Paladín extends Creyente{
 
     public Paladín(){
@@ -75,6 +78,22 @@ public class Paladín extends Creyente{
                 milagros = "";
         }
         return milagros;
+    }
+
+    public void equipaArma(Arma arma) {
+        if (getArma().getTipo().equals("arco") || getArma().getTipo().equals("baston")) {
+            System.err.println("Error, el paladín no puede llevar este tipo de armas");
+        }
+    }
+
+    public void equipaArmadura(Armadura armadura){
+        if(comporbarArmadura()) {
+            for (Armadura a : getArmadura()) {
+                if(a.getTipo().equals(armadura.getTipo()) && a.getMaterial().equals("metal"))
+                    return;
+            }
+            getArmadura().add(armadura);
+        }
     }
     
     public String toString(){

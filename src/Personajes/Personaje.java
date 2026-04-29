@@ -389,15 +389,61 @@ public class Personaje {
     }
 
     public void equiparArma(Arma arma){
+        if(this.arma != null){
+            System.err.println("Error, ya tienes un arma equipada");
+        } else setArma(arma);
+    }
+
+
+    public void equiparArmadura(Armadura arm){
+        if(comporbarArmadura()) {
+            for (Armadura a : armadura) {
+                if(a.getTipo().equals(arm.getTipo()))
+                    return;
+
+            }
+            armadura.add(arm);
+        }
+    }
+
+    public boolean comporbarArmadura() {
+        if (armadura.size() >= 6)
+            return false;
+        else return true;
 
     }
 
-    public void equiparArmadura(Armadura armadura){
+    public void equiparArtefacto(Artefacto artefactos){
+        int Artefactos = 0;
+        int Anillos = 0;
 
+        if(comprobarArtefacto()){
+            for (Artefacto art : artefacto) {
+                if(art.getTipo().equals("Artefactos") ){
+                    Artefactos++;
+                }
+                if(art.getTipo().equals("Anillos") ){
+                    Anillos++;
+                }
+            }
+            if(Artefactos >=1) {
+                System.err.println("Error, solo se puede equipar un arteacto");
+                return;
+            }
+
+            if(Anillos >= 2) {
+                System.err.println("Error, solo se puede equipar 2 anillos");
+                return;
+            }
+            artefacto.add(artefactos);
+        }
     }
 
-    public void equiparArtefacto(Artefacto artefacto){
-
+    public boolean comprobarArtefacto() {
+        if (artefacto.size() >= 3)
+            return false;
+        else
+            return true;
     }
 
     /**

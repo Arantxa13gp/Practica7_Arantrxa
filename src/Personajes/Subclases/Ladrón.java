@@ -6,6 +6,8 @@ package Personajes.Subclases;
  * @author Arantxa González Pérez
  * @version v1.0
  */
+import Equipamiento.Arma;
+import Equipamiento.Armadura;
 import Personajes.Personaje;
 
 public class Ladrón extends Personaje {
@@ -16,21 +18,6 @@ public class Ladrón extends Personaje {
      */
     public Ladrón(){
         super();
-    }
-
-    /**
-     * Constructor completo para la clase Ladrón.
-     * @param nombre Nombre del ladrón.
-     * @param atq Puntos de ataque iniciales.
-     * @param arm Puntos de armadura iniciales.
-     * @param pv Puntos de vida iniciales.
-     * @param nivel Nivel inicial.
-     * @param res Resistencia mágica inicial.
-     * @param vel Velocidad inicial.
-     * @param raza Raza a la que pertenece el ladrón.
-     */
-    public Ladrón(String nombre, int atq, int arm, int pv,int nivel, int res, int vel, String raza){
-        super(nombre, atq, arm, pv,nivel,res, vel, raza);
     }
 
     /**
@@ -101,10 +88,21 @@ public class Ladrón extends Personaje {
         } else setVel(getVel()+1);
     }
 
-    /**
-     * Método que permite al ladrón atacar con su estadística de velocidad
-     * */
-    public void robar(){
+    public void equipaArma(Arma arma) {
+        if (!getArma().getTipo().equals("espada") || !getArma().getTipo().equals("dagas")) {
+            System.err.println("Error, el ladrón no puede llevar este tipo de armas");
+        }
+    }
+
+    public void equipaArmadura(Armadura armadura){
+        if(comporbarArmadura()) {
+            for (Armadura a : getArmadura()) {
+                if(a.getTipo().equals(armadura.getTipo()) && a.getMaterial().equals("tela") ||
+                        a.getTipo().equals(armadura.getTipo()) && a.getMaterial().equals("cuero"))
+                    return;
+            }
+            getArmadura().add(armadura);
+        }
     }
 
     /**
