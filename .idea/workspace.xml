@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f9991ccb-7271-49d5-ab3e-d8c05126b1cb" name="Changes" comment="tercer commit">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Equipamiento/Arma.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Equipamiento/Arma.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Equipamiento/Equipamiento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Equipamiento/Equipamiento.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Personajes/Personaje.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Personajes/Personaje.java" afterDir="false" />
-    </list>
+    <list default="true" id="f9991ccb-7271-49d5-ab3e-d8c05126b1cb" name="Changes" comment="quinto commit" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -112,7 +107,14 @@
       <option name="project" value="LOCAL" />
       <updated>1775761525291</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="quinto commit">
+      <created>1777472251354</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1777472251354</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -130,6 +132,7 @@
     <MESSAGE value="Primer commit" />
     <MESSAGE value="Segundo commit" />
     <MESSAGE value="tercer commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="tercer commit" />
+    <MESSAGE value="quinto commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="quinto commit" />
   </component>
 </project>
