@@ -1,8 +1,21 @@
 package Combate;
 
+import Equipamiento.Equipamiento;
 import Personajes.Personaje;
+import Equipamiento.Armadura;
+import Equipamiento.Arma;
+import Equipamiento.Artefacto;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Combate {
+
+    private static ArrayList<Equipamiento> tesoros;
 
     public static void combatir(Personaje c1, Personaje c2) {
         int daño;
@@ -39,6 +52,7 @@ public class Combate {
             }
         }
     }
+
     public String realizarTurno(String turno) {
         switch (turno.toLowerCase()) {
             case "atacar":
@@ -54,5 +68,123 @@ public class Combate {
         }
         return turno;
     }
-}
 
+
+    //FileReader para los 3 ficheros
+    //Volcar de cada fichero los tesoros
+    //Crear AL de cada tipo de Equipamiento
+    //Generar un Equipamiento de cada linea del fichero y añadirlo al AL respectivo
+    //Volcar cada AL al de tesoros
+
+    public static ArrayList<Armadura> cargarArmadura() throws IOException {
+        String nombre, rareza, pieza, tipo;
+        int valor;
+        HashMap<String, Integer> estadisticas = new HashMap<>();
+        ArrayList<Armadura> armaduraCombate = new ArrayList<>();
+        File fichero = new File("Ficheros/armadura.csv");
+
+        if (!fichero.canRead()){
+            System.err.println("Error, fichero no se puede leer");
+        } else {
+            BufferedReader br = new BufferedReader(new FileReader(fichero));
+            String linea;
+            String [] campos;
+            String [] estadistica;
+            br.readLine();
+
+            while ((linea = br.readLine()) != null){
+                campos = linea.split(",");
+                nombre = campos[0];
+                rareza = campos [1];
+                pieza = campos[2];
+                tipo = campos[3];
+                estadistica = campos[4].split("-");
+                estadisticas.put("Ar", Integer.parseInt(estadistica[0]));
+                estadisticas.put("RM", Integer.parseInt(estadistica[1]));
+                estadisticas.put("V", Integer.parseInt(estadistica[2]));
+                valor = Integer.parseInt(campos[5]);
+                Armadura a = new Armadura(nombre, estadisticas, rareza, valor, tipo, pieza);
+                armaduraCombate.add(a);
+            }
+            br.close();
+        }
+        return armaduraCombate;
+    }
+
+    public static ArrayList<Arma> cargarArma() throws IOException{
+        String nombre, rareza, pieza, tipo;
+        int valor;
+        HashMap<String, Integer> estadisticas = new HashMap<>();
+        ArrayList<Arma> armaCombate = new ArrayList<>();
+        File fichero = new File("Ficheros/arma.csv");
+
+        if (!fichero.canRead()){
+            System.err.println("Error, fichero no se puede leer");
+        } else {
+            BufferedReader br = new BufferedReader(new FileReader(fichero));
+            String linea;
+            String [] campos;
+            String [] estadistica;
+            br.readLine();
+
+            while ((linea = br.readLine()) != null){
+                campos = linea.split(",");
+                nombre = campos[0];
+                rareza = campos [1];
+                tipo = campos[2];
+                estadistica = campos[3].split("-");
+                estadisticas.put("Fu", Integer.parseInt(estadistica[0]));
+                estadisticas.put("Ve", Integer.parseInt(estadistica[1]));
+                estadisticas.put("Ma", Integer.parseInt(estadistica[2]));
+                estadisticas.put("Fe", Integer.parseInt(estadistica[2]));
+                valor = Integer.parseInt(campos[4]);
+                String empuñadura = tipo;
+                switch (tipo){
+                    case "una mano":
+                        break;
+                    case "dos manos":
+                        break;
+                    default:
+                        return null;
+                }
+                Arma a = new Arma(nombre,estadisticas,rareza,valor,empuñadura,tipo);
+                armaCombate.add(a);
+            }
+            br.close();
+        }
+        return armaCombate;
+    }
+
+    public static ArrayList<Artefacto> cargarArtefacto() throws IOException{
+        String nombre, rareza, pieza, tipo;
+        int valor;
+        HashMap<String, Integer> estadisticas = new HashMap<>();
+        ArrayList<Artefacto> artefactoCombate = new ArrayList<>();
+        File fichero = new File("Ficheros/artefacto.csv");
+
+        if (!fichero.canRead()){
+            System.err.println("Error, fichero no se puede leer");
+        } else {
+            BufferedReader br = new BufferedReader(new FileReader(fichero));
+            String linea;
+            String [] campos;
+            String [] estadistica;
+            br.readLine();
+
+            while ((linea = br.readLine()) != null){
+                campos = linea.split(",");
+                nombre = campos[0];
+                rareza = campos [1];
+                tipo = campos[2];
+                estadistica = campos[3].split("-");
+                estadisticas.put("Fu", Integer.parseInt(estadistica[0]));
+                estadisticas.put("Ve", Integer.parseInt(estadistica[1]));
+                estadisticas.put("Ma", Integer.parseInt(estadistica[2]));
+                estadisticas.put("Fe", Integer.parseInt(estadistica[2]));
+                valor = Integer.parseInt(campos[4]);
+            }
+            br.close();
+        }
+        return artefactoCombate;
+    }
+}
