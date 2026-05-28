@@ -11,7 +11,9 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.HashMap;
+import java.util.Random;
 
 public class Combate {
 
@@ -75,6 +77,14 @@ public class Combate {
     //Crear AL de cada tipo de Equipamiento
     //Generar un Equipamiento de cada linea del fichero y añadirlo al AL respectivo
     //Volcar cada AL al de tesoros
+
+    public static ArrayList<Equipamiento> tesoros() throws IOException {
+        ArrayList<Equipamiento> tesoros = new ArrayList<>();
+        tesoros.addAll(cargarArmadura());
+        tesoros.addAll(cargarArma());
+        tesoros.addAll(cargarArtefacto());
+        return tesoros;
+    }
 
     public static ArrayList<Armadura> cargarArmadura() throws IOException {
         String nombre, rareza, pieza, tipo;
@@ -187,4 +197,30 @@ public class Combate {
         }
         return artefactoCombate;
     }
+
+    public static void combateGrupos(ArrayList<Personaje> grupo1, ArrayList<Personaje> grupo2) throws IOException {
+        Random r = new Random();
+        grupo1.sort(Comparator.comparingInt(Personaje::getNivel).reversed());
+        grupo2.sort(Comparator.comparingInt(Personaje::getNivel).reversed());
+        int premios = grupo2.size();
+        while (!grupo1.isEmpty() && !grupo2.isEmpty()){
+
+            Personaje p1 = grupo1.getFirst();
+            Personaje p2 = grupo2.getFirst();
+            combatir(p1,p2);
+
+            if (!p1.estaMuerto()){
+                System.out.printf(p1.getNombre()+ " ha muerto, el ganador es: " + p2.getNombre());
+                grupo1.removeFirst();
+                tesoros().get(r.nextInt(tesoros().size()));
+
+            }
+
+            if (!p2.estaMuerto()){
+                System.out.printf(p2.getNombre()+ " ha muerto, el ganador es: " + p1.getNombre());
+                grupo2.removeFirst();
+            }
+        }
+    }
+
 }

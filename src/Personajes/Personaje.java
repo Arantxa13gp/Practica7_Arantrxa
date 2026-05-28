@@ -401,6 +401,7 @@ public class Personaje {
         } else setArma(arma);
     }
 
+
     /**
      * Equipa una pieza de armadura al personaje.
      * Solo permite añadir la pieza si hay espacio disponible y si no existe otra pieza del mismo tipo.
@@ -512,4 +513,9 @@ public class Personaje {
         else return true;
     }
 
+    public void comprobarEquipamiento(){
+        if (
+                comporbarArmadura() && comprobarArtefacto() && comporbarArma()
+        )
+    }
 }

@@ -133,4 +133,5 @@ public class Arma extends Equipamiento {
             return false;
         } else return true;
     }
+
 }
